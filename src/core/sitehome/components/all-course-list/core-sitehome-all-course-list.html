@@ -1,0 +1,30 @@
+<!-- <a *ngIf="show" ion-item text-wrap [navPush]="'CoreCoursesAvailableCoursesPage'">
+    <core-icon name="fa-graduation-cap" fixed-width item-start></core-icon>
+    <h2>{{ 'core.courses.availablecourses' | translate}}</h2>
+</a> -->
+<div>
+    <core-dynamic-component>
+        <ion-item-divider>
+            <div class="item-inner">
+                <core-icon name="megaphone" fixed-width item-start></core-icon>
+                <div class="input-wrapper">
+                    <a *ngIf="show" ion-item>Announcements</a>
+                </div>
+            </div>
+            <core-empty-box image="assets/img/icons/courses.svg" ng-reflect-message="No recent courses"
+                ng-reflect-image="assets/img/icons/courses.svg" class="ng-star-inserted">
+            </core-empty-box>
+        </ion-item-divider>
+        <ion-item-divider>
+            <div class="item-inner">
+                <core-icon name="fa-graduation-cap" fixed-width item-start></core-icon>
+                <div class="input-wrapper">
+                    <a *ngIf="show"  [navPush]="'CoreCoursesAvailableCoursesPage'" ion-item>Upcoming Courses</a>
+                </div>
+            </div>
+            <core-empty-box image="assets/img/icons/courses.svg" ng-reflect-message="No recent courses"
+                ng-reflect-image="assets/img/icons/courses.svg" class="ng-star-inserted">
+            </core-empty-box>
+        </ion-item-divider>
+    </core-dynamic-component>
+</div>
